@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACM服务外包协同创新-首页</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        a:visited{
+            color: transparent;
+        }
+        @font-face {
+            font-family: yahei;
+            src: url("sourse/MSYHBD.TTC");
+        }
+        @font-face {
+            font-family: yahei1;
+            src: url("sourse/MSYH.TTC");
+        }
+        @font-face {
+            font-family: kaiti;
+            src: url("sourse/STKAITI.TTF");
+        }
+        .nal{
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            background-color: rgba(255, 255, 255, 0.945);
+            padding: 0 10px;
+            list-style: none;
+        }
+        .nal li:nth-child(2){
+            width: 320px;
+            margin: 0px 310px 0px 12px;
+            font: 20px yahei, Arial, sans-serif;
+            color: #2D76BE;
+        }
+        .nal li a{
+            color: #323130;
+            font: 18px yahei, Arial, sans-serif;
+            padding: 16px;
+            text-decoration: none;
+        }
+        .nal li a:hover{
+            color:black;
+        }
+        .nal li:last-child{
+            border-radius: 0.2em;
+            background-color: rgb(87, 87, 177);
+            
+        }
+        .nal li:nth-child(3){
+            line-height: 49px;
+            border-bottom: solid #2D76BE 2px;
+        }
+
+        .one{
+            width: auto;
+            height: 612px;
+            background-image: url("sourse/bg.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            box-shadow: 0px 5px rgb(238, 231, 231);
+        }
+        .one p{
+            width: 700px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0px 0px 0px 10px;
+
+        }
+        .one p:first-child{
+            padding: 180px 0px 0px 0px;
+            font:38px yahei, Arial, sans-serif;
+            color: #5385B4;
+        }
+        .one p:nth-child(2){
+            font: 25px yahei, Arial, sans-serif;
+            color: #323130E6;
+        }
+        .box1{
+            font: 19px yahei1, Arial, sans-serif;
+            color: #6E6D6B;
+            padding: 10px 0px;
+        }
+        .one p:last-child{
+            width: 300px;
+            margin: 20px 0px 0px 210px;
+            border-radius: 0.5em;
+            color: white;
+            background-color: #2D76BE;
+        }
+
+        .two{
+            height: 50px;
+            margin: 70px 0px;
+            background-color: transparent;
+        }
+        .two p{
+            width: 100px;
+            height: 30px;
+            margin: 8px 0px 0px;
+            padding: 0px 0px 0px 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .two p:first-child{
+            color: #3997F5;
+            font:18px yahei, Arial, sans-serif;
+        }
+
+        .three{
+            height: 150px;
+            margin: 120px 0px;
+            display: flex;
+        }
+        .three div:first-child{
+            padding: 0px 15px 0px 40px;
+        }
+        .three div:nth-child(2){
+            width: 1100px;
+            margin: 0px 10px 0px 0px;
+        }
+        .three .p1{
+            width: auto;
+            color: #0d1f50;
+            font:17px yahei, Arial, sans-serif;
+        }
+        .three .p2{
+            width: auto;
+            color: #323130;
+            font:22px yahei, Arial, sans-serif;
+            margin: 10px 0px 10px 0px;
+        }
+        .three .p3{
+            width: auto;
+            color: #5385B4D9;
+            font: 20px yahei, Arial, sans-serif;
+        }
+
+        .four{
+            height: 50px;
+            margin: 70px 0px;
+            background-color: transparent;
+        }
+        .four p{
+            width: 100px;
+            height: 30px;
+            margin: 8px 0px 0px;
+            padding: 0px 0px 0px 1132px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .four p:first-child{
+            color: #3997F5;
+            font:18px yahei, Arial, sans-serif;
+        }
+
+        .five{
+            height: 500px;
+            margin: 120px 0px 0px 0px;
+            display: flex;
+        }
+        .five .div1{
+            margin: 140px 340px 0px 40px;
+        }
+        .five .div2 p{
+            margin: 0px 40px 100px 0px;
+        }
+        .five .div2 p:last-child{
+            margin: 150px 0px;
+        }
+        .five .div3{
+            color: #273742;
+            font:19px kaiti, Arial, sans-serif;
+        }
+        .five .div3 p:nth-child(3){
+            margin: 80px 0px 0px 0px;
+        }
+        .five .div3 p:nth-child(5){
+            margin: 100px 0px 0px 0px;
+        }
+
+        .six{
+            height: 50px;
+            margin: 90px 0px 75px 0px;
+            background-color: transparent;
+        }
+        .six p{
+            width: 100px;
+            height: 30px;
+            margin: 8px 0px 0px;
+            padding: 0px 0px 0px 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .six p:first-child{
+            color: #3997F5;
+            font:18px yahei, Arial, sans-serif;
+        }
+
+        .senven{
+            height: 500px;
+            margin:20px 0px;            
+            display:flex;
+        }
+        .senven img:first-child{
+            margin: 0px 330px 0px 0px;
+        }
+        .senven img:last-child{
+            margin: 80px 0px 0px 0px;
+        }
+
+        .eight{
+            height: 50px;
+            margin: 0px 0px 75px 0px;
+            background-color: transparent;
+        }
+        .eight p{
+            width: 100px;
+            height: 30px;
+            margin: 8px 0px 0px;
+            padding: 0px 0px 0px 1132px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .eight p:first-child{
+            color: #3997F5;
+            font:18px yahei, Arial, sans-serif;
+        }
+
+
+        .nine{
+            width: auto;
+            display: flex;
+            margin: 100px 0px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .nine div:last-child{
+            margin: 100px 0px 40px 40px;
+        }
+        .nine div p{
+            padding: 40px 0px 0px 80px;
+            color: #348ac7;
+            font:21px yahei, Arial, sans-serif;
+        }
+
+        .ten{
+            display: flex;
+            margin: 0px 5px 0px 0px;
+            flex-direction: column;
+            background-color: #1a3249;
+        }
+        .ten .ten1{
+            height: 50px;
+            margin: 40px 0px 50px 30px;
+            display: flex;
+            align-items: center;
+        }
+        .ten .ten1 p:last-child{
+            color: gray;
+            padding: 0px 0px 0px 5px;
+            font: 16px yahei1, Arial, sans-serif;
+        }
+        .ten .ten2{
+            display: flex;
+            flex-direction: row;
+            color: white;
+            font: 16px yahei1, Arial, sans-serif;
+        }
+        .ten .ten2 .ten21{
+            padding: 0px 230px 60px 50px;
+        }
+        .ten .ten2 .ten22{
+            padding: 0px 230px 60px 0px;
+        }
+        .ten .ten2 .ten21 p{
+            font: 16px yahei, Arial, sans-serif;
+            margin: 10px 0px 0px 0px;
+        }
+        .ten .ten2 .ten21 a{
+            color: rgb(167, 165, 165);
+            font: 10px yahei1, Arial, sans-serif;
+            text-decoration: none;
+        }
+        .ten .ten2 .ten21 a:visited{
+            color: rgb(167, 165, 165);
+        }
+        .ten .ten2 .ten22 p{
+            font: 16px yahei, Arial, sans-serif;
+            margin: 10px 0px 0px 0px;
+        }
+        .ten .ten2 .ten22 a{
+            color: rgb(167, 165, 165);
+            font: 10px yahei1, Arial, sans-serif;
+            text-decoration: none;
+        }
+        .ten .ten2 .ten22 a:visited{
+            color: rgb(167, 165, 165);
+        }
+        .ten .ten2 .ten23 p{
+            font: 16px yahei, Arial, sans-serif;
+            margin: 10px 0px 0px 0px;
+        }
+        .ten .ten2 .ten23 a{
+            color: rgb(167, 165, 165);
+            font: 10px yahei1, Arial, sans-serif;
+            text-decoration: none;
+        }
+        .ten .ten2 .ten23 a:visited{
+            color: rgb(167, 165, 165);
+        }
+        .ten .ten3{
+            padding: 10px 0px 40px 30px;
+            color: rgb(167, 165, 165);
+            font: 13px yahei1, Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <ul class="nal">
+        <li>
+            <img height="30px" src="sourse/logo.png">
+        <li>
+            福州大学服务外包与软件设计实验室
+        </li>
+        <li>
+            <a href="#">首页</a>
+        </li>
+        <li>
+            <a href="http://sosd.fzu.edu.cn/login?return_url=%2Fcontest" target="_self">赛事相关</a>
+        </li>
+        <li>
+            <a href="http://sosd.fzu.edu.cn/login?return_url=%2Fcontest" target="_self">社区交流</a>
+        </li>
+        <li>
+            <a href="http://sosd.fzu.edu.cn/login?return_url=%2Fcontest" target="_self">信息公示</a>
+        </li>
+        <li>
+            <a href="http://sosd.fzu.edu.cn/login?return_url=%2Fcontest" target="_self">关于我们</a>
+        </li>
+        <li>
+            <a href="http://sosd.fzu.edu.cn/login?return_url=%2Fcontest" target="_self">加入我们</a>
+        </li>
+        <li>
+            <a style="color: white;" href="http://sosd.fzu.edu.cn/login?return_url=%2Fcontest" target="_self">登录</a>
+        </li>
+    </ul>
+
+    <div class="one">
+        <p>福州大学服务外包与软件设计实验室</p>
+        <p>Service Outsourcing & Software Design Lab</p>
+        <p class="box1">This is an awesome team with miracles</p>
+        <p class="box1">We firmly belive that hero continues!</p>
+        <p class="box1">Keep trying,keep going!</p>
+        <p class="box1">报名校赛</p>
+    </div>
+
+    <div class="two">
+        <p>实验室要闻</p>
+        <p>
+            <img src="sourse/title.png">
+        </p>
+    </div>
+
+    <nal class="three">
+
+        <div>
+            <img src="sourse/inform.png">
+        </div>
+
+        <div>
+            <p class="p1">纳新通知</p>
+            <p class="p2">实验室纳新开始啦!请有意向加入实验室的同学及时填写申请报名表</p>
+            <p class="p3">马上报名</p>
+        </div>
+
+        <div class="box2">
+            <img width="300px" src="sourse/news.png">
+        </div>
+
+    </nal>
+
+    <div class="four">
+        <p>实验室介绍</p>
+        <p>
+            <img src="sourse/title.png">
+        </p>
+    </div>
+
+    <nal class="five">
+
+        <div class="div1">
+            <p>
+                <img width="290px" src="sourse/info.png">
+            </p>
+        </div>
+
+        <div class="div2">
+            <p>
+                <img src="sourse/创新.png">
+            </p>
+            <p>
+                <img src="sourse/创意.png">
+            </p>
+            <p>
+                <img src="sourse/创造.png">
+            </p>
+        </div>
+
+        <div class="div3">
+            <p>ACM协同创新团队建立了<strong>“以学生为主体，以能力培养为核心，融知识、能力、素质协调发展”</strong>的拔尖创新人才培养理念；</p>
+            <p>始终坚持协同<strong>“教学改革”、“科学研究”、“社会服务”、“国际交流”和“文化创新与传承”</strong>这五个方面来培养高水平专业人才。</p>
+            <p>福州大学服务外包与软件设计实验室成立于2013年，先后组织队员们参与了<strong>“中国大学生服务外包创新创业大赛”、“中国软件杯大学生软件设计大赛”、“ 海峡两岸信息服务创新大赛”</strong>等比赛,</p>
+            <p>累计斩获国家<strong>特等奖1项，一等奖2项，二等奖11项，三等奖18项</strong>;海峡两岸<strong>一等奖9项， 二等奖13项，三等奖21项</strong></p>
+            <p>目前实验室主要设有三个小组：<strong>移动开发、Web和美工组，正式成员40余名。</strong></p>
+            <p>实验室先后开发了包括<strong>福州大学教务通、福州大学校友通</strong>在内的一系列应用软件。</p>
+        </div>
+
+    </nal>
+
+    <div class="six">
+        <p>实验室技能</p>
+        <p>
+            <img src="sourse/title.png">
+        </p>
+    </div>
+
+    <div class="senven">
+        <img width="700px" src="sourse/skill-all.png">
+        <img  width="280px" height="190px" src="sourse/skill.png">
+    </div>
+
+    <div class="eight">
+        <p>实验室活动</p>
+        <p>
+            <img src="sourse/title.png">
+        </p>
+    </div>
+    
+    <nal class="nine">
+
+        <div>
+            <img width="1200px" height="800px" src="sourse/1.jpg">
+        </div>
+
+        <div class="ninediv">
+            <p>如果你富有创造和激情</p>
+            <p>渴望温暖活力的大家庭</p>
+            <p>想要学习生活丰富充实</p>
+            <p>希望拥有提升自我以及</p>
+            <p>实现自我价值的平台</p>
+            <p>这里，是你最好的平台！</p>
+            <p>给你一个锻炼的舞台，成就不一样的精彩！</p>
+        </div>
+
+    </nal>
+
+    <nal class="ten">
+        <div class="ten1">
+            <p>
+                <img height="39px" src="sourse/logo.png">
+            </p>
+            <p>SOSD</p>
+        </div>
+
+        <div class="ten2">
+            <div class="ten21">
+                <p>教育</p>
+                <p> <a href="https://www.fzu.edu.cn/html/index.shtml" target="_self">福州大学首页</a> </p>
+                <p>
+                    <a href="https://jwch.fzu.edu.cn/" target="_self">福州大学教务处</a>
+                </p>
+                <p>
+                    <a href="https://yjsy.fzu.edu.cn/" target="_self">福州大学研究生院</a>
+                </p>
+                <p>
+                    <a href="https://cmcs.fzu.edu.cn/" target="_self">福州大学计算机与大数据学院</a>
+                </p>
+
+            </div>
+
+            <div class="ten22">
+                <p>团队</p>
+                <p>
+                    <a href="http://acm.fzu.edu.cn/" target="_self">福州大学ACM-ICPC集训团队</a>
+                </p>
+                <p>
+                    <a  id="bottom" href="#">服务外包与软件设计实验室</a>
+                </p>
+                <p>
+                    <a href="http://59.77.134.5/" target="_self">团队教学成功展示</a>
+                </p>
+            </div>
+
+            <div class="ten23">
+                <p>相关课程网站</p>
+                <p>
+                    <a href="http://acm.fzu.edu.cn/" target="_self">福州大学ACM在线测评系统</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="ten3">
+            <p>© 2013-2021 福州大学ACM协同创新团队</p>
+        </div>
+
+    </nal>
+
+</body>
+</html>
